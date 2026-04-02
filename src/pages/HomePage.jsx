@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react'
 import secretImage from '../assets/secret.jpg'
-import artfight2 from '../assets/Art Fight 2025/artfight 2.png'
-import tieflingMonk from '../assets/Character Designs/March 2026 tieflingMonk.png'
-import alien from '../assets/Character Designs/Febuary 2026 Alien.png'
+import artfight2 from '../assets/Full Pieces/October 2025 CoverArt.png'
+import tieflingMonk from '../assets/Full Pieces/March 2026 DejaVu.png'
+import alien from '../assets/Full Pieces/March 2026 Amadeus.png'
 import statue from '../assets/Full Pieces/January 2026 Statue.png'
-import amadeus from '../assets/Full Pieces/March 2026 Amadeus.png'
+import amadeus from '../assets/Full Pieces/damir.png'
 
 export default function HomePage() {
   const slides = [
-    { src: artfight2, alt: 'Artfight 2' },
-    { src: tieflingMonk, alt: 'March 2026 tieflingMonk' },
-    { src: alien, alt: 'Febuary 2026 Alien' },
-    { src: statue, alt: 'January 2026 Statue' },
-    { src: amadeus, alt: 'March 2026 Amadeus' },
+    { src: artfight2},
+    { src: tieflingMonk},
+    { src: alien},
+    { src: statue},
+    { src: amadeus},
   ]
 
   const [activeSlideIndex, setActiveSlideIndex] = useState(0)
