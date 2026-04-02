@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import secretImage from '../assets/secret.jpg'
+import wallImage from '../assets/the wall.webp'
 import artfight2 from '../assets/Full Pieces/October 2025 CoverArt.png'
 import tieflingMonk from '../assets/Full Pieces/March 2026 DejaVu.png'
 import alien from '../assets/Full Pieces/March 2026 Amadeus.png'
@@ -27,7 +28,7 @@ export default function HomePage() {
 
   return (
     <>
-      <img src="/dist/assets/the wall-402NISME.webp" alt="Artwork" height="200px" width="100%" style={{ objectFit: "cover", objectPosition: "top center" }}></img>
+      <img src={wallImage} alt="Artwork" height="200px" width="100%" style={{ objectFit: "cover", objectPosition: "top center" }}></img>
       <div className="page home-page">
         <p className="eyebrow">Art Portfolio</p>
         <h2>George Puchalski</h2>
