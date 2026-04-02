@@ -54,7 +54,10 @@ function App() {
       </aside>
 
       <main className="content">
-        <ActivePage categories={categories} />
+        <ActivePage categories={categories} /><br></br>
+      <footer style={{alignItems: 'center', display: 'flex', justifyContent: 'center', bottom: 0, padding: '1rem', width: '100%', backgroundColor: 'var(--clr-dark)'}}>
+      &copy; {new Date().getFullYear()} George Puchalski. All rights reserved.| Designed by X. Puchalski
+      </footer>
       </main>
     </div>
   )

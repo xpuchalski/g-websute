@@ -29,7 +29,7 @@ export default function HomePage() {
   return (
     <>
       <img src={wallImage} alt="Artwork" height="200px" width="100%" style={{ objectFit: "cover", objectPosition: "top center" }}></img>
-      <div className="page home-page">
+      <div className="page home-page" style={{backgroundColor: "#101517"}}>
         <p className="eyebrow">Art Portfolio</p>
         <h2>George Puchalski</h2>
         <p>

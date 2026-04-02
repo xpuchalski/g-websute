@@ -40,7 +40,6 @@
 body {
   margin: 0;
   min-width: 320px;
-  background: var(--clr-dark);
 }
 
 h1,

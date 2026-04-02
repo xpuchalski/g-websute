@@ -1,6 +1,6 @@
 .app-shell {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 300px 1fr;
   min-height: 100vh;
   /* dark is the background — kept clean */
   background: var(--clr-dark);
@@ -15,7 +15,8 @@
   height: 100vh;
   padding: 2rem 1.25rem;
   border-right: 1px solid rgb(var(--clr-teal-ch) / 0.45);
-  background: rgb(var(--clr-dark-ch) / 0.96);
+  background: linear-gradient(0deg, var(--clr-teal) 0%, var(--clr-dark) 70%);
+  border: 3px solid var(--clr-dark);
   display: flex;
   flex-direction: column;
 }
