@@ -11,8 +11,8 @@
   --clr-sage:        #c8cfc2;
   --clr-dark:        #101517;
   --clr-teal:        #2f5b69;
-  --clr-orange:      #ffa84b;
-  --clr-yellow:      #ffd957;
+  --clr-orange:      #ffd957;
+  --clr-yellow:      #ffa84b;
 
   /* RGB channels for rgba() usage */
   --clr-sage-ch:     200 207 194;
@@ -21,6 +21,8 @@
   --clr-orange-ch:   255 168 75;
   --clr-yellow-ch:   255 217 87;
 
+  /* Increase global typography scale by 25% */
+  font-size: 125%;
   font-family: 'Spectral', serif;
   line-height: 1.5;
   font-weight: 400;

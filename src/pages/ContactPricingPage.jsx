@@ -1,3 +1,5 @@
+import pricesImage from '../assets/Prices.png'
+
 export default function ContactPricingPage() {
   return (
     <div className="page">
@@ -5,13 +7,12 @@ export default function ContactPricingPage() {
 
       <section className="contact-block">
         <h3>Get in Touch</h3>
-        <p>Email: <a href="mailto:">g@g.com</a></p>
+        <p>Email: <a href="mailto:georgepuchalski07@gmail.com">georgepuchalski07@gmail.com</a></p>
         <p>Instagram: <a href="https://www.instagram.com/george_mlem/" target="_blank" rel="noreferrer">@george_mlem</a></p>
       </section>
 
       <section className="pricing-block">
         <h3>Pricing</h3>
-        <img src="/src/assets/Prices.png" width="80%"></img>
         <table className="pricing-table">
           <thead>
             <tr>
@@ -38,6 +39,7 @@ export default function ContactPricingPage() {
             </tr>
           </tbody>
         </table>
+        <img src={pricesImage} width="80%" alt="Pricing examples" />
       </section>
     </div>
   )

@@ -2,21 +2,18 @@ import { Fragment, useState } from 'react'
 import { useCategories } from './hooks/useCategories'
 import HomePage from './pages/HomePage'
 import PortfolioPage from './pages/PortfolioPage'
-import AboutMePage from './pages/AboutMePage'
 import ContactPricingPage from './pages/ContactPricingPage'
 import './App.css'
 
 const PAGES = {
   home: HomePage,
   portfolio: PortfolioPage,
-  about: AboutMePage,
   contact: ContactPricingPage,
 }
 
 const NAV_ITEMS = [
   { id: 'home', label: 'Home' },
   { id: 'portfolio', label: 'Portfolio' },
-  { id: 'about', label: 'About Me' },
   { id: 'contact', label: 'Contact & Pricing' },
 ]
 

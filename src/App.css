@@ -1,6 +1,6 @@
 .app-shell {
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: 280px 1fr;
   min-height: 100vh;
   /* dark is the background — kept clean */
   background: var(--clr-dark);
@@ -142,6 +142,71 @@
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.78rem;
+}
+
+.secret-area {
+  margin-top: 1.25rem;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.secret-label {
+  margin: 0;
+  color: rgb(var(--clr-sage-ch) / 0.75);
+  font-size: 0.9rem;
+}
+
+.secret-coordinates {
+  color: var(--clr-orange);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.secret-reveal {
+  width: min(420px, 100%);
+  border-radius: 10px;
+  border: 2px solid rgb(var(--clr-teal-ch) / 0.55);
+  opacity: 0;
+  transform: translateY(-6px) scale(0.98);
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, max-height 0.25s ease;
+}
+
+.secret-area:hover .secret-reveal,
+.secret-area:focus-within .secret-reveal {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  max-height: 500px;
+}
+
+.home-slideshow {
+  margin-top: 1rem;
+  border: 1px solid rgb(var(--clr-teal-ch) / 0.45);
+  border-radius: 14px;
+  padding: 0.85rem;
+  background: rgb(var(--clr-dark-ch) / 0.45);
+}
+
+.home-slideshow-image {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 10px;
+  border: 2px solid rgb(var(--clr-teal-ch) / 0.5);
+  display: block;
+}
+
+.home-slideshow-caption {
+  margin: 0.6rem 0 0;
+  color: rgb(var(--clr-sage-ch) / 0.85);
+  font-size: 0.92rem;
 }
 
 /* ── Portfolio page ──────────────────────────────── */
