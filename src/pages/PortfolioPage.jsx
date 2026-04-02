@@ -59,14 +59,16 @@ export default function PortfolioPage({ categories }) {
           <h3>{category.name}</h3>
           <div className="gallery-grid">
             {category.images.map((image, imageIndex) => (
-              <button
-                key={`${category.id}-${image.src}`}
-                className="image-button"
-                onClick={() => openLightbox(categoryIndex, imageIndex)}
-                aria-label={`Open ${image.alt}`}
-              >
-                <img src={image.src} alt={image.alt} loading="lazy" />
-              </button>
+              <div key={`${category.id}-${image.src}`} className="gallery-item">
+                <button
+                  className="image-button"
+                  onClick={() => openLightbox(categoryIndex, imageIndex)}
+                  aria-label={`Open ${image.alt}`}
+                >
+                  <img src={image.src} alt={image.alt} loading="lazy" />
+                </button>
+                <p className="image-filename">{image.alt}</p>
+              </div>
             ))}
           </div>
         </article>

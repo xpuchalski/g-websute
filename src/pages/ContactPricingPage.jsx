@@ -39,7 +39,7 @@ export default function ContactPricingPage() {
             </tr>
           </tbody>
         </table>
-        <img src={pricesImage} width="80%" alt="Pricing examples" />
+        <img src={pricesImage} width="80%" alt="Pricing chart" />
       </section>
     </div>
   )

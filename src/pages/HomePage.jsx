@@ -7,24 +7,24 @@ import alien from '../assets/Full Pieces/March 2026 Amadeus.png'
 import statue from '../assets/Full Pieces/January 2026 Statue.png'
 import amadeus from '../assets/Full Pieces/damir.png'
 
-export default function HomePage() {
-  const slides = [
-    { src: artfight2},
-    { src: tieflingMonk},
-    { src: alien},
-    { src: statue},
-    { src: amadeus},
-  ]
+const HOME_SLIDES = [
+  { src: artfight2, alt: 'October 2025 CoverArt' },
+  { src: tieflingMonk, alt: 'March 2026 DejaVu' },
+  { src: alien, alt: 'March 2026 Amadeus' },
+  { src: statue, alt: 'January 2026 Statue' },
+  { src: amadeus, alt: 'Damir' },
+]
 
+export default function HomePage() {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0)
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
-      setActiveSlideIndex((current) => (current + 1) % slides.length)
+      setActiveSlideIndex((current) => (current + 1) % HOME_SLIDES.length)
     }, 2600)
 
     return () => window.clearInterval(intervalId)
-  }, [slides.length])
+  }, [])
 
   return (
     <>
@@ -48,10 +48,10 @@ export default function HomePage() {
       <div className="home-slideshow" aria-label="Featured rotating artworks">
         <img
           className="home-slideshow-image"
-          src={slides[activeSlideIndex].src}
-          alt={slides[activeSlideIndex].alt}
+          src={HOME_SLIDES[activeSlideIndex].src}
+          alt={HOME_SLIDES[activeSlideIndex].alt}
         />
-        <p className="home-slideshow-caption">{slides[activeSlideIndex].alt}</p>
+        <p className="home-slideshow-caption">{HOME_SLIDES[activeSlideIndex].alt}</p>
       </div>
     </>
   )
