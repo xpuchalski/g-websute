@@ -1,0 +1,49 @@
+/* ── Palette ───────────────────────────────────────────
+   --clr-sage    #c8cfc2   muted green-grey (text, borders)
+   --clr-dark    #101517   near-black background
+   --clr-teal    #2f5b69   accent blue-green
+   --clr-orange  #ffa84b   warm accent / hover
+   --clr-yellow  #ffd957   highlight / titles
+──────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');
+
+:root {
+  --clr-sage:        #c8cfc2;
+  --clr-dark:        #101517;
+  --clr-teal:        #2f5b69;
+  --clr-orange:      #ffa84b;
+  --clr-yellow:      #ffd957;
+
+  /* RGB channels for rgba() usage */
+  --clr-sage-ch:     200 207 194;
+  --clr-dark-ch:     16 21 23;
+  --clr-teal-ch:     47 91 105;
+  --clr-orange-ch:   255 168 75;
+  --clr-yellow-ch:   255 217 87;
+
+  font-family: 'Spectral', serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--clr-dark);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}

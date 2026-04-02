@@ -1,0 +1,334 @@
+.app-shell {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+  /* dark is the background — kept clean */
+  background: var(--clr-dark);
+  color: var(--clr-sage);
+}
+
+/* ── Sidebar ─────────────────────────────────────── */
+/* Sidebar: slightly lighter than the bg, teal border separates it */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 2rem 1.25rem;
+  border-right: 1px solid rgb(var(--clr-teal-ch) / 0.45);
+  background: rgb(var(--clr-dark-ch) / 0.96);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Site title — accent (yellow), used once, sparingly */
+.site-title {
+  margin: 0 0 1.25rem;
+  padding: 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.08em;
+  color: var(--clr-yellow);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+/* Nav items default: sage (primary text) */
+.nav-item {
+  background: none;
+  border: none;
+  padding: 0.3rem 0;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-sage);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover: orange (tertiary — action signal) */
+.nav-item:hover {
+  color: var(--clr-orange);
+  transform: translateX(3px);
+}
+
+/* Active: teal (secondary — indicates current location) */
+.nav-item.active {
+  color: var(--clr-teal);
+  font-weight: 700;
+}
+
+/* Category nav: teal structural border (secondary) */
+.category-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-left: 0.85rem;
+  border-left: 2px solid rgb(var(--clr-teal-ch) / 0.6);
+  margin-top: 0.25rem;
+}
+
+/* Category links: slightly muted sage; teal border already signals secondary */
+.category-link {
+  color: rgb(var(--clr-sage-ch) / 0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover: orange (tertiary — action signal) */
+.category-link:hover {
+  color: var(--clr-orange);
+  transform: translateX(3px);
+}
+
+/* ── Main content ────────────────────────────────── */
+.content {
+  padding: 2rem clamp(1rem, 4vw, 3rem) 3rem;
+}
+
+.page {
+  animation: fade-in-up 0.35s ease both;
+}
+
+/* h2: teal (secondary — structural heading) */
+.page h2 {
+  color: var(--clr-teal);
+  margin-bottom: 1rem;
+}
+
+/* h3: orange (tertiary — supporting subheading) */
+.page h3 {
+  color: var(--clr-orange);
+  margin-bottom: 0.6rem;
+}
+
+/* Links: teal (secondary) */
+.page a {
+  color: var(--clr-teal);
+  text-decoration: none;
+}
+
+/* Link hover: orange (tertiary — action signal) */
+.page a:hover {
+  color: var(--clr-orange);
+}
+
+/* ── Home page ───────────────────────────────────── */
+/* Card border: teal (secondary surface boundary) */
+/* Yellow accent line at top: accent used as a single thin decorative stripe */
+.home-page {
+  border: 1px solid rgb(var(--clr-teal-ch) / 0.5);
+  border-top: 3px solid var(--clr-yellow);
+  border-radius: 14px;
+  padding: clamp(1rem, 2.8vw, 2rem);
+  background: rgb(var(--clr-teal-ch) / 0.06);
+}
+
+/* Eyebrow: orange (tertiary — label/tag role) */
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--clr-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+}
+
+/* ── Portfolio page ──────────────────────────────── */
+.category-section {
+  margin-top: 1.5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+}
+
+/* Image placeholder bg: teal (secondary surface) */
+.image-button {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--clr-teal);
+}
+
+.image-button img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.image-button:hover img {
+  transform: scale(1.05);
+}
+
+/* Empty state: orange (tertiary — attention) */
+.empty-state {
+  color: var(--clr-orange);
+}
+
+/* ── Contact / Pricing page ──────────────────────── */
+.contact-block,
+.pricing-block {
+  margin-bottom: 2rem;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.75rem;
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid rgb(var(--clr-teal-ch) / 0.25);
+  text-align: left;
+}
+
+/* Table header: teal surface (secondary) with sage text */
+.pricing-table th {
+  background: rgb(var(--clr-teal-ch) / 0.3);
+  color: var(--clr-sage);
+  font-weight: 600;
+}
+
+.pricing-table tr:nth-child(even) td {
+  background: rgb(var(--clr-dark-ch) / 0.4);
+}
+
+.pricing-note {
+  font-size: 0.85rem;
+  color: rgb(var(--clr-sage-ch) / 0.7);
+}
+
+/* ── Lightbox ────────────────────────────────────── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 0.86);
+  display: grid;
+  grid-template-columns: 64px 1fr 64px;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  z-index: 999;
+}
+
+/* Image border: teal (secondary — frames the work) */
+.lightbox-image {
+  width: 100%;
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 2px solid var(--clr-teal);
+}
+
+/* Buttons: teal border, sage text (neutral/secondary) */
+.close-btn,
+.nav-btn {
+  border: 1px solid rgb(var(--clr-teal-ch) / 0.6);
+  background: rgb(var(--clr-dark-ch) / 0.85);
+  color: var(--clr-sage);
+  border-radius: 999px;
+  width: 48px;
+  height: 48px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover: orange (tertiary — action signal) */
+.close-btn:hover,
+.nav-btn:hover {
+  border-color: var(--clr-orange);
+  color: var(--clr-orange);
+}
+
+.close-btn {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+}
+
+.nav-btn.prev {
+  justify-self: center;
+}
+
+.nav-btn.next {
+  justify-self: center;
+}
+
+/* ── Animation ───────────────────────────────────── */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 900px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    height: auto;
+    padding: 1rem;
+    border-right: 0;
+    border-bottom: 1px solid rgb(var(--clr-sage-ch) / 0.24);
+    z-index: 100;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.9rem;
+  }
+
+  .category-nav {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-left: 0;
+    border-top: 1px solid rgb(var(--clr-teal-ch) / 0.5);
+    padding-left: 0;
+    padding-top: 0.4rem;
+    margin-top: 0.4rem;
+    gap: 0.4rem 0.9rem;
+  }
+
+  .lightbox {
+    grid-template-columns: 46px 1fr 46px;
+  }
+
+  .close-btn,
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.45rem;
+  }
+}
